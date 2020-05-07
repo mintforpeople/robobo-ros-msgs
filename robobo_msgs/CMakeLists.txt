@@ -16,6 +16,9 @@ add_message_files(
 	Tap.msg
 	Fling.msg
 	Led.msg
+	QrCode.msg
+	Lane.msg
+	ModuleControl.msg
 )
 
 add_service_files(
