@@ -1,0 +1,6 @@
+std_msgs/Int16 panPos
+std_msgs/Int8 panSpeed
+std_msgs/Int16 panUnlockId
+std_msgs/Int16 tiltPos
+std_msgs/Int8 tiltSpeed
+std_msgs/Int16 tiltUnlockId
