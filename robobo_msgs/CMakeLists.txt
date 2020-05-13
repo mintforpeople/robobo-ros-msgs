@@ -48,6 +48,7 @@ generate_messages(
 	DEPENDENCIES
 	std_msgs
 	sensor_msgs
+	opencv_apps
 )
 
 catkin_package(CATKIN_DEPENDS message_runtime)
