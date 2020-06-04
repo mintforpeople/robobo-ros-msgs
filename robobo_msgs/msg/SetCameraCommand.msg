@@ -3,6 +3,4 @@
 # Identifier of the camera to use:
 # 0 for front camera
 # 1 for back cameras
-std_msgs/Int8 camera
----
-std_msgs/Int8 error 
+std_msgs/Int8 camera   

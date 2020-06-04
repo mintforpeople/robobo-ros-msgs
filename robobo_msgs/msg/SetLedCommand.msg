@@ -6,5 +6,3 @@ std_msgs/String id
 # Color to set the values to; posible values: white,
 # red, blue, cyan, magenta, yellow, green, orange, off.
 std_msgs/String color
----
-std_msgs/Int8 error

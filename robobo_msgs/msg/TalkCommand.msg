@@ -2,5 +2,4 @@
 #
 # Text to be spoken
 std_msgs/String text
----
-std_msgs/Int8 error
+

@@ -14,5 +14,3 @@ std_msgs/Int16 tiltPos
 std_msgs/Int8 tiltSpeed
 # Identifier for end-of-movement notification
 std_msgs/Int16 tiltUnlockId
----
-std_msgs/Int8 error

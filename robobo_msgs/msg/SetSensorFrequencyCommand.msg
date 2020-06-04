@@ -6,6 +6,4 @@
 # 1 for NORMAL
 # 2 for HIGH
 # 3 for MAX
-std_msgs/Int8 frequency 
----
-std_msgs/Int8 error
+std_msgs/Int8 frequency   

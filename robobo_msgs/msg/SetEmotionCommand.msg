@@ -3,5 +3,3 @@
 # String of the emotion to show. Posible values:
 # happy, laughing, sad, angry, surprised, normal.
 std_msgs/String emotion
----
-std_msgs/Int8 error

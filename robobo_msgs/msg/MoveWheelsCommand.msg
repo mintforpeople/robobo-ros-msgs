@@ -9,5 +9,3 @@ std_msgs/Int8 rspeed
 std_msgs/Int32 time
 # Identifier for end-of-movement notification
 std_msgs/Int16 unlockid
----
-std_msgs/Int8 error

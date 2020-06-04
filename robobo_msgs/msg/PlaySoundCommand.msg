@@ -6,5 +6,3 @@
 # doubtful, laugh, likes, mumble, 
 # ouch, thinking, various
 std_msgs/String sound
----
-std_msgs/Int8 error
