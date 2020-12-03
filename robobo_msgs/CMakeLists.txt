@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(robobo_msgs)
 
 find_package(catkin REQUIRED COMPONENTS
+	opencv_apps
 	roscpp 
 	rospy 
 	std_msgs
