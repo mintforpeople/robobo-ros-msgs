@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
 	std_msgs
 	sensor_msgs
 	message_generation
+	geometry_msgs
 )
 
 add_message_files(
@@ -30,6 +31,7 @@ add_message_files(
 	SetSensorFrequencyCommand.msg
 	TalkCommand.msg
 	ResetWheelsCommand.msg
+	OrientationEuler.msg
 )
 
 add_service_files(
@@ -51,6 +53,7 @@ generate_messages(
 	std_msgs
 	sensor_msgs
 	opencv_apps
+	geometry_msgs
 )
 
 catkin_package(CATKIN_DEPENDS message_runtime)
