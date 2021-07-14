@@ -1,0 +1,79 @@
+# Install ROS
+# Add repo keys
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+# Update apt
+sudo apt-get update
+# Install ros kinetic from apt
+sudo apt-get install ros-kinetic-desktop
+# Add ros setup to bashrc
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+# Install ross depencencies
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+sudo apt install python-rosdep
+
+# Init rosdep
+sudo rosdep init
+rosdep update
+
+# Locate ros installation
+printenv | grep ROS
+source /opt/ros/kinetic/setup.bash
+
+# Create catkin workspace folder
+mkdir -p ~/catkin_ws/src
+cd catkin_ws/
+
+# Init workspace
+catkin_make
+
+# Create repositories folder and download robobo messages repo
+cd ..
+mkdir repositories
+cd repositories/
+git clone https://github.com/mintforpeople/robobo-ros-msgs.git
+
+# Link repository to src folder in catkin workspace
+ln -fs robobo-ros-msgs/ ../catkin_ws/src/
+
+# Activate workspace
+cd catkin_ws/
+cd devel/
+source ./setup.bash
+
+# Install robobo messages dependencies
+sudo apt-get install ros-kinetic-opencv-apps
+catkin_make install
+
+sudo apt-get install ros-kinetic-genjava
+sudo apt-get install ros-kinetic-roscpp
+sudo apt-get install ros-kinetic-rosjava_messages
+catkin_make
+
+
+
+# Create message specification
+cd src/robobo-ros-msgs/robobo_msgs/msg
+
+touch <MessageName>.msg
+nano <MessageName>.msg 
+cd ..
+
+# Update package definitions to match new messages 
+nano CMakeLists.txt
+nano package.xml
+
+# Build ros packages
+cd --
+cd catkin_ws/
+catkin_make clean
+catkin_make 
+
+# Generate robobo messages jar for rosjava
+genjava_message_artifacts --verbose
+genjava_message_artifacts --verbose -p robobo_msgs
+
+# Locate generated jar
+cd ./build/robobo_msgs/build/libs
