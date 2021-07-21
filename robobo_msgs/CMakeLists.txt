@@ -46,6 +46,7 @@ add_service_files(
 	SetSensorFrequency.srv
 	Talk.srv
 	SetLoad.srv
+	SetModule.srv
 )
 
 generate_messages(
