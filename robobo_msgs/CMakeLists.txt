@@ -18,6 +18,7 @@ add_message_files(
 	Tap.msg
 	Fling.msg
 	Led.msg
+	Blob.msg
 	QrCode.msg
 	QrCodeChange.msg
 	Lane.msg
@@ -28,6 +29,7 @@ add_message_files(
 	SetCameraCommand.msg
 	SetEmotionCommand.msg
 	SetLedCommand.msg
+	SetBlobCommand.msg
 	SetSensorFrequencyCommand.msg
 	TalkCommand.msg
 	ResetWheelsCommand.msg
